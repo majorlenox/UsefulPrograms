@@ -68,7 +68,7 @@ public class Main {
                     if (HM.getM() == 0){System.out.println("There is no Matrix"); break;}
                     try {
                         HM.hmatrixToFile();
-                        System.out.println("Now Matrix in .\\Matrix.txt");
+                        System.out.println("Now Matrix in ./Matrix.txt");
                     }catch (IOException ex){
                         ex.getMessage();
                     }

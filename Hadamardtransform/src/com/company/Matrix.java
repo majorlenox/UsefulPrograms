@@ -50,7 +50,7 @@ public class Matrix {
 
     public void hmatrixToFile() throws IOException {
 
-        Formatter f = new Formatter(".\\HMatrix.txt");
+        Formatter f = new Formatter("./HMatrix.txt");
         for (int i=0; i<n; i++){
             for (int j=0; j<m; j++){
                 if (M.get(i).get(j)==1){f.format("  1"); }else{
