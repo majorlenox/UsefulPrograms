@@ -1,16 +1,15 @@
-import java.io.IOException;
 import java.math.BigInteger;
 
 public class Main {
 
-    public static void main(String[] args) throws IOException {
-        BigInteger n = new BigInteger("238373560316942850390995533425775013783");
+    public static void main(String[] args){
+        BigInteger n = new BigInteger("1584586296183412107468474423529992275940096154074798537916936609523894209759157543");
         BigInteger e = new BigInteger("65537");
-        BigInteger c = new BigInteger("224443774599960357148718901487584596812");
+        BigInteger c = new BigInteger("964354128913912393938480857590969826308054462950561875638492039363373779803642185");
         // find p, q from factordb.com
-        BigInteger p = new BigInteger("13542555658222801393");
-        BigInteger q = new BigInteger("17601815073376244231");
-        BigInteger f = new BigInteger("238373560316942850359851162694175968160");
+        BigInteger p = new BigInteger("2434792384523484381583634042478415057961");
+        BigInteger q = new BigInteger("650809615742055581459820253356987396346063");
+        BigInteger f = Find_f(p, q);
         BigInteger d = Find_d(e,f);
         BigInteger m = Decrypt(c,d,n);
         System.out.println(m);
@@ -25,7 +24,7 @@ public class Main {
     }
 
     static BigInteger Decrypt(BigInteger c, BigInteger d, BigInteger n){
-        return c.multiply(d).mod(n);
+        return c.modPow(d,n);
     }
 
 }
