@@ -82,7 +82,7 @@ if __name__ == '__main__':
     plt.title('F0 and F1 hamming weight distribution')
     plt.xlabel('hamming weight')
     mu = 4
-    sigma = 0.8
+    sigma = 0.6
     x = np.arange(0, 8, 0.001)
     plt.plot(x, norm.pdf(x, mu, sigma), '--', color='black')
     plt.legend(prop={'size': 12})
